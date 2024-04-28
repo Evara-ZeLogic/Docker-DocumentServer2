@@ -27,7 +27,7 @@ IS_UPGRADE="false"
 
 ONLYOFFICE_DATA_CONTAINER=${ONLYOFFICE_DATA_CONTAINER:-false}
 ONLYOFFICE_DATA_CONTAINER_HOST=${ONLYOFFICE_DATA_CONTAINER_HOST:-localhost}
-ONLYOFFICE_DATA_CONTAINER_PORT=8080
+ONLYOFFICE_DATA_CONTAINER_PORT=8088
 
 RELEASE_DATE="$(stat -c="%y" ${APP_DIR}/server/DocService/docservice | sed -r 's/=([0-9]+)-([0-9]+)-([0-9]+) ([0-9:.+ ]+)/\1-\2-\3/')";
 if [ -f ${DS_RELEASE_DATE} ]; then
@@ -79,11 +79,11 @@ NGINX_WORKER_PROCESSES=${NGINX_WORKER_PROCESSES:-1}
 # Limiting the maximum number of simultaneous connections due to possible memory shortage
 [ $(ulimit -n) -gt 1048576 ] && NGINX_WORKER_CONNECTIONS=${NGINX_WORKER_CONNECTIONS:-1048576} || NGINX_WORKER_CONNECTIONS=${NGINX_WORKER_CONNECTIONS:-$(ulimit -n)}
 
-JWT_ENABLED=${JWT_ENABLED:-true}
+JWT_ENABLED=${JWT_ENABLED:-false}
 
 # validate user's vars before usinig in json
-if [ "${JWT_ENABLED}" == "true" ]; then
-  JWT_ENABLED="true"
+if [ "${JWT_ENABLED}" == "false" ]; then
+  JWT_ENABLED="false"
 else
   JWT_ENABLED="false"
 fi

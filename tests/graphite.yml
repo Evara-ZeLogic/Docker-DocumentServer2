@@ -16,7 +16,7 @@ services:
     expose:
       - '2003'
     ports:
-      - '8080:80'
+      - '8088:80'
     volumes:
       - ./graphite/statsd:/var/www/onlyoffice/documentserver/server/Metrics/config
 

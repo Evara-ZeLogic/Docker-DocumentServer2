@@ -18,7 +18,7 @@ services:
       - REDIS_SERVER_HOST=onlyoffice-redis
       - REDIS_SERVER_PORT=6379
       # Uncomment strings below to enable the JSON Web Token validation.
-      #- JWT_ENABLED=true
+      - JWT_ENABLED=false
       #- JWT_SECRET=secret
       #- JWT_HEADER=Authorization
       #- JWT_IN_BODY=true
@@ -50,7 +50,7 @@ services:
     stdin_open: true
     restart: always
     expose:
-      - '8080'
+      - '8088'
     volumes_from:
      - onlyoffice-documentserver-data
 
@@ -73,7 +73,7 @@ services:
       #- /app/onlyoffice/DocumentServer/data/certs/onlyoffice.pem:/certs/cert1.pem
     restart: always
     ports:
-      - '8080:80'
+      - '8088:80'
       - '443:443'
       - '1936:1936'
        

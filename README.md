@@ -85,9 +85,9 @@ Normally, you do not need to store container data because the container's operat
 
 ### Running ONLYOFFICE Document Server on Different Port
 
-To change the port, use the -p command. E.g.: to make your portal accessible via port 8080 execute the following command:
+To change the port, use the -p command. E.g.: to make your portal accessible via port 8088 execute the following command:
 
-    sudo docker run -i -t -d -p 8080:80 onlyoffice/documentserver
+    sudo docker run -i -t -d -p 8088:80 onlyoffice/documentserver
 
 ### Running ONLYOFFICE Document Server using HTTPS
 

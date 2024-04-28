@@ -70,7 +70,7 @@ COPY config/supervisor/supervisor /etc/init.d/
 COPY config/supervisor/ds/*.conf /etc/supervisor/conf.d/
 COPY run-document-server.sh /app/ds/run-document-server.sh
 
-EXPOSE 8080 443
+EXPOSE 8088 443
 
 ARG COMPANY_NAME=onlyoffice
 ARG PRODUCT_NAME=documentserver
