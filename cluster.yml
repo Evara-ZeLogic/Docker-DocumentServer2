@@ -50,7 +50,7 @@ services:
     stdin_open: true
     restart: always
     expose:
-      - '80'
+      - '8080'
     volumes_from:
      - onlyoffice-documentserver-data
 
@@ -73,7 +73,7 @@ services:
       #- /app/onlyoffice/DocumentServer/data/certs/onlyoffice.pem:/certs/cert1.pem
     restart: always
     ports:
-      - '80:80'
+      - '8080:80'
       - '443:443'
       - '1936:1936'
        

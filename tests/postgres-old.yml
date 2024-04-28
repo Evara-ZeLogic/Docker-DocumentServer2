@@ -15,7 +15,7 @@ services:
     stdin_open: true
     restart: always
     ports:
-      - '80:80'
+      - '8080:80'
 
   onlyoffice-postgresql:
     container_name: onlyoffice-postgresql

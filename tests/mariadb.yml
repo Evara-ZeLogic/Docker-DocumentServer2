@@ -16,7 +16,7 @@ services:
     stdin_open: true
     restart: always
     ports:
-      - '80:80'
+      - '8080:80'
 
   onlyoffice-mariadb:
     container_name: onlyoffice-mariadb
